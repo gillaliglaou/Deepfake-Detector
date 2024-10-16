@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Cryptocode - Free Cryptocurrency Bootstrap 5 HTML Template</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="author" content="">
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+
+  <link rel="stylesheet" type="text/css" href="css/vendor.css">
+  <link rel="stylesheet" type="text/css" href="assets/fonts/icomoon.css">
+  <link href="assets/vendor/bootstrap-5.1.3/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&family=Lato:wght@300;400;700;900&display=swap"
+    rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Page Title</title>
+  <!-- script
+    ================================================== -->
+  <script src="js/modernizr.js"></script>
+  <style>
+    .left,
+    .right {
+      width: 50%;
+    }
+  </style>
+</head>
+
+<body class="homepage bg-dark text-white">
+  <nav class="navbar navbar-expand-lg container-fluid p-4 ">
+  </nav>
+  <div class="col-md-6 left d-flex flex-column align-items-center justify-content-center">
+    <!-- Upload Button -->
+    <label for="fileInput" class="btn btn-primary mb-3">Upload Image</label>
+    <input type="file" class="file-input" id="fileInput" style="display: none;">
+  
+    <!-- Image Section -->
+    <div id="imageContainer" class="image-holder border-set-bold border-rounded" style="width: 400px; height: 400px;"></div>
+  
+    <!-- Test Button -->
+    <button id="testButton" class="btn btn-success mt-3">Test It</button>
+  </div>
+    
+        </div>
+        <!-- Right half: Output image section -->
+        <div class="col-md-6 right">
+          <div class="banner-content content-light m-5">
+            <h1 class="banner-title display-3">Check the authenticity of your image</h1>
+            <p>
+              Welcome to our deepfake detection platform! Combatting the spread of misinformation and ensuring the integrity of digital content is crucial in today's interconnected world. To assist in this effort, simply drop your image here to initiate our advanced AI model for deepfake detection.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+  <div id="footer-bottom">
+    <!-- Footer content -->
+  </div>
+  <script src="js/jquery-1.11.0.min.js"></script>
+  <script src="assets/vendor/bootstrap-5.1.3/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+  <script type="text/javascript" src="js/plugins.js"></script>
+  <script type="text/javascript" src="js/script.js"></script>
+  <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+  <script>
+    function previewFile() {
+      var preview = document.getElementById('previewImage');
+      var file = document.querySelector('input[type=file]').files[0];
+      var reader = new FileReader();
+
+      reader.onloadend = function () {
+        preview.src = reader.result;
+      }
+
+      if (file) {
+        reader.readAsDataURL(file);
+      } else {
+        preview.src = "images/placeholder.jpg";
+      }
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?htwbkd');
+  src:  url('fonts/icomoon.eot?htwbkd#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?htwbkd') format('truetype'),
+    url('fonts/icomoon.woff?htwbkd') format('woff'),
+    url('fonts/icomoon.svg?htwbkd#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-ripple:before {
+  content: "\e902";
+  color: #42dda7;
+}
+.icon-ethereum:before {
+  content: "\e901";
+}
+.icon-facebook:before {
+  content: "\ea90";
+}
+.icon-twitter:before {
+  content: "\ea96";
+}
+.icon-youtube:before {
+  content: "\ea9d";
+}
+.icon-linkedin:before {
+  content: "\eaca";
+}
+.icon-bitcoin:before {
+  content: "\e900";
+}
+.icon-bars:before {
+  content: "\f0c9";
+}
+.icon-instagram:before {
+  content: "\f16d";
+}

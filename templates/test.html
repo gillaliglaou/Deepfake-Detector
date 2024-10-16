@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>DEEPFAKE DETECTOR</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="author" content="">
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <link rel="icon" type="image/png" href="static\images\TheDee.png />
+  <link rel="stylesheet" type="text/css" href="static\css\vendor.css">
+  <link rel="stylesheet" type="text/css" href="static\assets\fonts\icomoon.css">
+  <link href="static\assets\vendor\bootstrap-5.1.3\css\bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+
+  <link rel="stylesheet" type="text/css" href="static\style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&family=Lato:wght@300;400;700;900&display=swap"
+    rel="stylesheet">
+
+  <!-- script
+    ================================================== -->
+  <script src="static\js\modernizr.js"></script>
+</head>
+
+
+<body class="homepage bg-dark text-white">
+ <nav class="navbar navbar-expand-lg container-fluid p-4 ">
+    <div class="container-fluid">
+      <div class="main-logo">
+        <a href="index.html">
+          <img src="static\images\TheDee.png" alt="logo" >
+        </a>
+      </div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+        aria-controls="offcanvasNavbar">
+        <iconify-icon icon="system-uicons:menu-hamburger" class="hamburger-menu"></iconify-icon>
+      </button>
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title text-white" id="offcanvasNavbarLabel">Menu</h5>
+          <button type="button" class="btn-close btn-close-white text-reset" data-bs-dismiss="offcanvas"
+            aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body justify-content-lg-between">
+          <div class="main-menu text-center d-lg-flex align-items-center ">
+            <ul class="menu-list list-unstyled d-lg-flex content-light m-0">
+              <li class="menu-item text-uppercase">
+                <a class="fw-bold" href="index.html">Home</a>
+              </li>
+              <li class="menu-item text-uppercase">
+                <a class="fw-bold" href="about.html">About</a>
+              </li>
+              <li class="menu-item text-uppercase">
+                <a class="fw-bold" href="blog.html">Blog</a>
+              </li>
+              <li class="menu-item text-uppercase">
+                <a class="fw-bold" href="services.html">Service</a>
+              </li>
+              <li class="menu-item text-uppercase">
+                <a class="fw-bold" href="contact.html">Contact</a>
+              </li>
+             
+             
+            </ul>
+          </div>
+
+          <div class="btn-wrap d-md-flex">
+            <a href="#" class="btn btn-normal btn-medium align-self-center text-uppercase btn-rounded login-btn"  data-bs-toggle="modal" data-bs-target="#exampleModal">Log
+              in</a>
+                            <!-- Modal -->
+                            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                  <div class="tabs-listing mt-4">
+                                    <nav>
+                                      <div class="nav nav-tabs d-flex justify-content-center border-0" id="nav-tab" role="tablist">
+                                        <button class="btn btn-outline-primary text-uppercase me-3 active" id="nav-sign-in-tab"
+                                          data-bs-toggle="tab" data-bs-target="#nav-sign-in" type="button" role="tab"
+                                          aria-controls="nav-sign-in" aria-selected="true">Log In</button>
+                                        <button class="btn btn-outline-primary text-uppercase" id="nav-register-tab"
+                                          data-bs-toggle="tab" data-bs-target="#nav-register" type="button" role="tab"
+                                          aria-controls="nav-register" aria-selected="false">Sign Up</button>
+                                      </div>
+                                    </nav>
+                                    <div class="tab-content" id="nav-tabContent">
+                                      <div class="tab-pane fade active show" id="nav-sign-in" role="tabpanel"
+                                        aria-labelledby="nav-sign-in-tab">
+                                        <form id="form1" class="form-group flex-wrap p-3 ">
+                                          <div class="form-input col-lg-12 my-4">
+                                            <label for="exampleInputEmail1"
+                                              class="form-label fs-6 text-uppercase fw-bold text-black ">Email
+                                              Address</label>
+                                            <input type="text" id="exampleInputEmail1" name="email" placeholder="Email"
+                                              class="form-control bg-secondary bg-opacity-10 ps-3">
+                                          </div>
+                                          <div class="form-input col-lg-12 my-4">
+                                            <label for="inputPassword1"
+                                              class="form-label  fs-6 text-uppercase fw-bold text-black ">Password</label>
+                                            <input type="password" id="inputPassword1" placeholder="Password"
+                                              class="form-control bg-secondary bg-opacity-10 ps-3" aria-describedby="passwordHelpBlock">
+                                            <div id="passwordHelpBlock" class="form-text text-center">
+                                              <a href="#" class=" password">Forgot Password ?</a>
+                                            </div>
+            
+                                          </div>
+                                          <label class="py-3">
+                                            <input type="checkbox" required="" class="d-inline">
+                                            <span class="label-body text-black">Remember Me</span>
+                                          </label>
+                                          <div class="d-grid my-3">
+                                            <button class="btn btn-primary btn-lg btn-dark text-uppercase btn-rounded-none fs-6">Log
+                                              In</button>
+                                          </div>
+                                        </form>
+                                      </div>
+                                      <div class="tab-pane fade" id="nav-register" role="tabpanel"
+                                        aria-labelledby="nav-register-tab">
+                                        <form id="form2" class="form-group flex-wrap p-3 ">
+                                          <div class="form-input col-lg-12 my-4">
+                                            <label for="exampleInputEmail2"
+                                              class="form-label fs-6 text-uppercase fw-bold text-black">Email
+                                              Address</label>
+                                            <input type="text" id="exampleInputEmail2" name="email" placeholder="Email"
+                                              class="form-control bg-secondary bg-opacity-10 ps-3">
+                                          </div>
+                                          <div class="form-input col-lg-12 my-4">
+                                            <label for="inputPassword2"
+                                              class="form-label  fs-6 text-uppercase fw-bold text-black">Password</label>
+                                            <input type="password" id="inputPassword2" placeholder="Password"
+                                              class="form-control bg-secondary bg-opacity-10 ps-3" aria-describedby="passwordHelpBlock">
+                                          </div>
+                                          <label class="py-3">
+                                            <input type="checkbox" required="" class="d-inline">
+                                            <span class="label-body text-black">I agree to the <a href="#"
+                                                class="text-black password border-bottom">Privacy Policy</a>
+                                            </span>
+                                          </label>
+                                          <div class="d-grid my-3">
+                                            <button
+                                              class="btn btn-primary btn-lg btn-dark text-uppercase btn-rounded-none fs-6">Sign
+                                              Up</button>
+                                          </div>
+                                        </form>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+            <a href="#" class="btn btn-linear btn-medium align-self-center btn-rounded text-uppercase register-btn mt-3 mt-md-0" data-bs-toggle="modal"
+            data-bs-target="#exampleModal2">Register</a>
+                            <!-- Modal -->
+                            <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                  <div class="tabs-listing mt-4">
+                                    <nav>
+                                      <div class="nav nav-tabs d-flex justify-content-center border-0" id="nav-tab2" role="tablist">
+                                        <button class="btn btn-outline-primary text-uppercase me-4 " id="nav-sign-in-tab2"
+                                          data-bs-toggle="tab" data-bs-target="#nav-sign-in2" type="button" role="tab"
+                                          aria-controls="nav-sign-in2" aria-selected="false">Log In</button>
+                                        <button class="btn btn-outline-primary text-uppercase active" id="nav-register-tab2"
+                                          data-bs-toggle="tab" data-bs-target="#nav-register2" type="button" role="tab"
+                                          aria-controls="nav-register2" aria-selected="true">Sign Up</button>
+                                      </div>
+                                    </nav>
+                                    <div class="tab-content" id="nav-tabContent1">
+                                      <div class="tab-pane fade " id="nav-sign-in2" role="tabpanel"
+                                        aria-labelledby="nav-sign-in-tab2">
+                                        <form id="form3" class="form-group flex-wrap p-3 ">
+                                          <div class="form-input col-lg-12 my-4">
+                                            <label for="exampleInputEmail3"
+                                              class="form-label fs-6 text-uppercase fw-bold text-black">Email
+                                              Address</label>
+                                            <input type="text" id="exampleInputEmail3" name="email" placeholder="Email"
+                                              class="form-control bg-secondary bg-opacity-10 ps-3">
+                                          </div>
+                                          <div class="form-input col-lg-12 my-4">
+                                            <label for="inputPassword3"
+                                              class="form-label  fs-6 text-uppercase fw-bold text-black">Password</label>
+                                            <input type="password" id="inputPassword3" placeholder="Password"
+                                              class="form-control bg-secondary bg-opacity-10 ps-3" aria-describedby="passwordHelpBlock">
+                                            <div id="passwordHelpBlock2" class="form-text text-center">
+                                              <a href="#" class=" password">Forgot Password ?</a>
+                                            </div>
+            
+                                          </div>
+                                          <label class="py-3">
+                                            <input type="checkbox" required="" class="d-inline">
+                                            <span class="label-body text-black">Remember Me</span>
+                                          </label>
+                                          <div class="d-grid my-3">
+                                            <button class="btn btn-primary btn-lg btn-dark text-uppercase btn-rounded-none fs-6">Log
+                                              In</button>
+                                          </div>
+                                        </form>
+                                      </div>
+                                      <div class="tab-pane fade active show" id="nav-register2" role="tabpanel"
+                                        aria-labelledby="nav-register-tab2">
+                                        <form id="form4" class="form-group flex-wrap p-3 ">
+                                          <div class="form-input col-lg-12 my-4">
+                                            <label for="exampleInputEmail4"
+                                              class="form-label fs-6 text-uppercase fw-bold text-black">Email
+                                              Address</label>
+                                            <input type="text" id="exampleInputEmail4" name="email" placeholder="Email"
+                                              class="form-control bg-secondary bg-opacity-10 ps-3">
+                                          </div>
+                                          <div class="form-input col-lg-12 my-4">
+                                            <label for="inputPassword4"
+                                              class="form-label  fs-6 text-uppercase fw-bold text-black">Password</label>
+                                            <input type="password" id="inputPassword4" placeholder="Password"
+                                              class="form-control bg-secondary bg-opacity-10 ps-3" aria-describedby="passwordHelpBlock">
+                                          </div>
+                                          <label class="py-3">
+                                            <input type="checkbox" required="" class="d-inline">
+                                            <span class="label-body text-black">I agree to the <a href="#"
+                                                class="text-black password border-bottom">Privacy Policy</a>
+                                            </span>
+                                          </label>
+                                          <div class="d-grid my-3">
+                                            <button
+                                              class="btn btn-primary btn-lg btn-dark text-uppercase btn-rounded-none fs-6">Sign
+                                              Up</button>
+                                          </div>
+                                        </form>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+
+
+
+  <div class="row">
+    <!-- Left Half -->
+    <div class="col-md-6 left d-flex flex-column align-items-center justify-content-center">
+      <label for="fileInput" class="btn btn-primary mb-3">Upload Image</label>
+      <input type="file" class="file-input" id="fileInput" style="display: none;">
+      <div id="imageContainer" class="image-holder border-set-bold border-rounded" style="width: 400px; height: 400px;border-color:var(--accent-color);"></div>
+      <button id="testButton" class="btn btn-primary mt-3">Test It</button>
+    </div>
+  
+    <!-- Right Half -->
+    <div class="col-md-6 d-flex flex-column align-items-center justify-content-center">
+      <div id="outputImageContainer" class="image-holder border-set-bold border-rounded mb-3" style="width: 400px; height: 400px; border-color:var(--accent-color);"></div>
+      <p class="xxxx" style="  color: var( --light-color);">Your image is: <span id="predictionText" style="  color: var(--accent-color); font-style: italic; font-weight: bolder;"></span></p>
+    </div>
+  </div>
+
+
+  
+  <footer id="footer" class="padding-large">
+    <div class="container">
+      <div class="row d-flex flex-wrap justify-content-between">
+        <div class="col-sm-6 col-lg-4">
+          <div class="footer-item item-001">
+            <img src="static\images\TheDee.png" alt="logo">
+            <p>Platform created by our team: <br>Ahmed BTA 
+           and Hmaied Mhamed 
+            </p>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-2">
+          <div class="footer-item item-002 content-light">
+            <h4 class="widget-title">About</h4>
+            <ul class="footer-menu list-unstyled text-uppercase">
+              <li>
+                <a href="#">About us</a>
+              </li>
+              <li>
+                <a href="#">Features</a>
+              </li>
+              <li>
+                <a href="#">News</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-2">
+          <div class="footer-item item-003 content-light">
+            <h4 class="widget-title">Company</h4>
+            <ul class="footer-menu list-unstyled text-uppercase">
+              <li>
+                <a href="#">Deepfakes</a>
+              </li>
+              <li>
+                <a href="#">Team</a>
+              </li>
+              <li>
+                <a href="#">Used technology</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-2">
+          <div class="footer-item item-004 content-light">
+            <h4 class="widget-title">Support</h4>
+            <ul class="footer-menu list-unstyled text-uppercase">
+              <li>
+                <a href="#">FAQs</a>
+              </li>
+              <li>
+                <a href="#">Support</a>
+              </li>
+              <li>
+                <a href="#">Contact us</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-2">
+          <div class="footer-item item-005 content-light">
+            <h4 class="widget-title">Social</h4>
+            <ul class="footer-menu social-links list-unstyled d-flex">
+              <li class="border-set-thin border-rounded-10">
+                <a href="#"><i class="icon icon-facebook"></i></a>
+              </li>
+              <li class="border-set-thin border-rounded-10">
+                <a href="#"><i class="icon icon-twitter"></i></a>
+              </li>
+              <li class="border-set-thin border-rounded-10">
+                <a href="#"><i class="icon icon-instagram"></i></a>
+              </li>
+              <li class="border-set-thin border-rounded-10">
+                <a href="#"><i class="icon icon-linkedin"></i></a>
+              </li>
+              <li class="border-set-thin border-rounded-10">
+                <a href="#"><i class="icon icon-youtube"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <hr>
+  <div id="footer-bottom">
+    <div class="container">
+      <div class="row text-center">
+        <p>© 2024 Deepfake Detector: <a href="https://templatesjungle.com/"
+            class="light">Equipe P2M</a></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="static\js\jquery-1.11.0.min.js"></script>
+  <script src="static\assets\vendor\bootstrap-5.1.3\js\bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+  <script type="text/javascript" src="static\js\plugins.js"></script>
+  <script type="text/javascript" src="static\js\script.js"></script>
+  <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+ 
+  <script>
+    document.getElementById('testButton').addEventListener('click', function() {
+      var fileInput = document.getElementById('fileInput');
+      var imageContainer = document.getElementById('imageContainer');
+      var outputImageContainer = document.getElementById('outputImageContainer');
+      var predictionText = document.getElementById('predictionText');
+      var maskOutput = document.getElementById('maskOutput');
+  
+      // Check if a file has been uploaded
+      if (fileInput.files.length === 0) {
+        alert('Please upload an image first.');
+        return;
+      }
+  
+      // Display the uploaded image
+      var file = fileInput.files[0];
+      var reader = new FileReader();
+      reader.onload = function(e) {
+        imageContainer.innerHTML = '<img src="' + e.target.result + '" style="max-width: 100%; max-height: 100%;" />';
+      };
+      reader.readAsDataURL(file);
+  
+      // Send the image to the Flask application for prediction
+      var formData = new FormData();
+      formData.append('file', file);
+  
+      fetch('/predict', {
+        method: 'POST',
+        body: formData
+      })
+      .then(response => response.json())
+      .then(data => {
+        // Display the output image
+        outputImageContainer.innerHTML = '<img src="' + data.mask_image_url+ '" style="max-width: 100%; max-height: 100%;" />';
+  
+        // Update the prediction text
+        predictionText.textContent = data.prediction_text;
+  
+        // Decode and display the mask output
+        var maskImage = new Image();
+        console.log(data.output_image)
+        maskImage.src = 'data:image/jpeg;base64,' + data.mask;
+        maskImage.onload = function() {
+          maskOutput.innerHTML = '';
+          maskOutput.appendChild(maskImage);
+        };
+      })
+      .catch(error => console.error('Error:', error));
+    });
+  </script>
+  
+    
+</body>
+
+</html>

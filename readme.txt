@@ -1,1 +1,1 @@
-This repository contains the notebook used to develop a model capable of identifying deepfakes and generating a mask of the manipulated area, as well as the folders for the interface developped to deploy the model and make it accessible for the user's convenience.
+
